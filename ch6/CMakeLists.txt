@@ -15,8 +15,19 @@ find_package(Ceres REQUIRED)
 include_directories(${CERES_INCLUDE_DIRS})
 
 # g2o
+set(CMAKE_PREFIX_PATH "/home/russell/code/github/g2o/lib")
+set(G2O_INCLUDE_DIRS "/home/russell/code/github/g2o/build")
 find_package(G2O REQUIRED)
-include_directories(${G2O_INCLUDE_DIRS})
+
+include_directories(
+        # ${OpenCV_INCLUDE_DIRS}
+        ${G2O_INCLUDE_DIRS}
+        # ${Sophus_INCLUDE_DIRS}
+        # "/usr/include/eigen3/"
+        "/home/russell/code/github/g2o/build"
+        "/home/russell/code/github/g2o/"
+        # "/home/russell/code/github/Sophus"
+)
 
 # Eigen
 include_directories("/usr/include/eigen3")

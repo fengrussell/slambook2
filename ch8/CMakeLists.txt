@@ -9,6 +9,9 @@ find_package(OpenCV 4 REQUIRED)
 find_package(Sophus REQUIRED)
 find_package(Pangolin REQUIRED)
 
+set(CMAKE_PREFIX_PATH "/home/russell/code/github/g2o/lib")
+set(G2O_INCLUDE_DIRS "/home/russell/code/github/g2o/build")
+
 include_directories(
         ${OpenCV_INCLUDE_DIRS}
         ${G2O_INCLUDE_DIRS}

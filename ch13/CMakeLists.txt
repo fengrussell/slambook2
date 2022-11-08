@@ -27,6 +27,8 @@ find_package(Sophus REQUIRED)
 include_directories(${Sophus_INCLUDE_DIRS})
 
 # G2O
+set(CMAKE_PREFIX_PATH "/home/russell/code/github/g2o/lib")
+set(G2O_INCLUDE_DIRS "/home/russell/code/github/g2o/build")
 find_package(G2O REQUIRED)
 include_directories(${G2O_INCLUDE_DIRS})
 
